@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+header{
+    padding: 3rem;
+    background-color: red;
+}
+header h1{
+    text-align: center;
+    color: white;
+}
+main{
+    margin: 0 10rem;
+}
+section#cards{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+}
+section#cards div.card{
+    width: 20rem;
+    box-shadow: 5px 5px 5px 5px #00000015;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+section#cards div.card img{
+    width: 100%;
+}
+section#cards div.card h2{
+    margin-bottom: 1rem;
+    text-align: center;
+}
+section#cards div.card .descricao{
+    text-align: justify;
+}
+section#cards div.card .tipo{
+    padding: .3rem;
+    width: 5rem;
+    margin-top: 1rem;
+    color: white;
+    background-color: rgba(255, 0, 0, 0.863);
+    border-radius: 20%;
+}
+section#cadastro{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+section#cadastro h2{
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    padding-bottom: 3rem;
+}
+section#cadastro form{
+    width: 50%;
+}
+section#cadastro form input{
+    width: 100%;
+    padding: 0.7rem;
+    font-size: 1rem;
+    outline: none;
+    border: 1px solid rgb(177, 177, 177);
+    margin-bottom: 1rem;
+}
+section#cadstro form label{
+    margin: 1rem 0;
+}
+section#cadastro form button{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 20%;
+    padding: .6rem;
+    font-size: 1rem;
+    background-color: white;
+    border: 1px solid red;
+    color: red;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+section#cadastro form button:hover{
+    background-color: red;
+    color: white;
+}
