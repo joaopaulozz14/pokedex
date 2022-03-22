@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import express from 'express';
 import path from 'path';
 
@@ -9,7 +10,7 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(___dirname, 'public')));
 app.use(express.urlencoded());
 
-const port = 3001;
+const port = process.env.PORT || 3000;
 
 const pokedex = [
     {
@@ -68,4 +69,4 @@ app.get("/delete/:id", (req,res) => {
     res.redirect("/#cards");
 });
 
-app.listen(3001, () => console.log(`Servidor rodando na porta ${port}`));
+app.listen(port, () => console.log(`Servidor rodando na porta ${port}`));
