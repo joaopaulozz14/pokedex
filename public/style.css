@@ -3,18 +3,39 @@
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
 }
-body{
-    width: 100vw;
-    height: 100vh;
+nav{
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    background-color: #DC0A2D;
 }
-header{
-    padding: 3rem;
-    background-color: red;
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
 }
-header h1{
+nav ul li{
+    padding: .6rem;
+}
+nav img{
+    width: 3rem;
+}
+nav h1{
     text-align: center;
+    font-size: 1.4rem;
     color: white;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+}
+header img{
+    width: 100%;
+    height: 10%;
+    margin-top: 4rem;
 }
 main{
     margin: 0 10rem;
@@ -23,7 +44,11 @@ section#cards{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    margin-top: 5rem;
+    margin: 4rem 0 5rem 0;
+}
+section#cards h2{
+    width: 100%;
+    text-align: center;
 }
 section#cards div.card{
     width: 20rem;
@@ -49,10 +74,59 @@ section#cards div.card .tipo{
     background-color: rgba(255, 0, 0, 0.863);
     border-radius: 20%;
 }
+section#cards div.card div#configuracoes{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+section#cards div.card a#editar{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 2rem;
+    width: 20%;
+    padding: .6rem;
+    font-size: 1rem;
+    background-color: white;
+    border: 1px solid rgba(46, 46, 255, 0.699);
+    color: rgba(46, 46, 255, 0.699);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    text-decoration: none;
+}
+section#cards div.card a#apagar{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 2rem;
+    width: 20%;
+    padding: .6rem;
+    font-size: 1rem;
+    background-color: white;
+    border: 1px solid red;
+    color: red;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    text-decoration: none;
+}
+section#cards div.card a#editar:hover{
+    background-color: rgba(46, 46, 255, 0.699);
+    color: white;
+}
+section#cards div.card a#apagar:hover{
+    background-color: red;
+    color: white;
+}
 section#cadastro{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    padding-bottom: 5rem;
+    margin-top: 4rem;
+}
+section#cadastro img{
+    width: 50%;
+    height: 40%;
+    margin-top: 6rem;
 }
 section#cadastro h2{
     width: 100%;
@@ -61,7 +135,7 @@ section#cadastro h2{
     padding-bottom: 3rem;
 }
 section#cadastro form{
-    width: 50%;
+    width: 100%;
 }
 section#cadastro form input{
     width: 100%;
@@ -90,4 +164,24 @@ section#cadastro form button{
 section#cadastro form button:hover{
     background-color: red;
     color: white;
+}
+footer{
+    background-color: #DC0A2D;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+footer p{
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: .3rem;
+}
+footer p a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
 }
