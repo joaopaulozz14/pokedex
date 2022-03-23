@@ -69,5 +69,12 @@ app.get("/delete/:id", (req,res) => {
     delete pokedex[id];
     res.redirect("/#cards");
 });
+app.get("/personagem/:id", (req, res) => {
+    const pokemonAtual = pokedex.filter((element)=> element.id == req.params.id)
+    
+    res.render('detalhes.ejs', {
+        pokemonAtual
+    })
+});
 
 app.listen(port, () => console.log(`Servidor rodando na porta ${port}`));
